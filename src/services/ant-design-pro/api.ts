@@ -43,9 +43,9 @@ export async function outLogin(options?: { [key: string]: any }) {
 }
 
 
-/** 搜索用户 GET /user/search */
+/** 用户查询 GET /user/admin/search */
 export async function searchUsers(options?: { [key: string]: any }) {
-  return request<API.BaseResponse<API.CurrentUser[]>>('http://localhost:8080/user/search', {
+  return request<API.BaseResponse<API.CurrentUser[]>>('http://localhost:8080/user/admin/search', {
     method: 'GET',
     ...(options || {}),
   });

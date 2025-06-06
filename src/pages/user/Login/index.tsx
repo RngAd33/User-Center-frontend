@@ -69,7 +69,7 @@ const Login: React.FC = () => {
       <div className={styles.content}>
         <LoginForm
           logo={<img alt="logo" src={SYSTEM_LOGO}/>}
-          title="编程导航知识星球"
+          title="神舟星球"
           subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">最好的编程学习知识圈子</a>}
           initialValues={{
             autoLogin: true,
@@ -96,7 +96,7 @@ const Login: React.FC = () => {
                 rules={[
                   {
                     required: true,
-                    message: '账号是必填项！',
+                    message: '账号必填！',
                   },
                 ]}
               />
@@ -110,7 +110,7 @@ const Login: React.FC = () => {
                 rules={[
                   {
                     required: true,
-                    message: '密码是必填项！',
+                    message: '密码必填！',
                   },
                   {
                     min: 8,
