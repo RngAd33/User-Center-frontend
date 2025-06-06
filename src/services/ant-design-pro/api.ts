@@ -4,7 +4,7 @@ import request from '@/plugins/globalRequest';
 
 /** 注册接口 POST /user/register */
 export async function register(body: API.RegisterParams, options?: { [key: string]: any }) {
-  return request<API.BaseResponse<API.RegisterResult>>('/user/register', {
+  return request<API.BaseResponse<API.RegisterResult>>('http://localhost:8080/user/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export async function register(body: API.RegisterParams, options?: { [key: strin
 
 /** 登录接口 POST /user/login */
 export async function login(body: API.LoginParams, options?: { [key: string]: any }) {
-  return request<API.BaseResponse<API.LoginResult>>('/user/login', {
+  return request<API.BaseResponse<API.LoginResult>>('http://localhost:8080//user/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export async function login(body: API.LoginParams, options?: { [key: string]: an
 
 /** 获取当前的用户 GET /user/current */
 export async function currentUser(options?: { [key: string]: any }) {
-  return request<API.BaseResponse<API.CurrentUser>>('/user/current', {
+  return request<API.BaseResponse<API.CurrentUser>>('http://localhost:8080//user/current', {
     method: 'GET',
     ...(options || {}),
   });
@@ -36,7 +36,7 @@ export async function currentUser(options?: { [key: string]: any }) {
 
 /** 退出登录接口 POST /user/logout */
 export async function outLogin(options?: { [key: string]: any }) {
-  return request<API.BaseResponse<number>>('/user/logout', {
+  return request<API.BaseResponse<number>>('http://localhost:8080//user/logout', {
     method: 'POST',
     ...(options || {}),
   });
@@ -45,7 +45,7 @@ export async function outLogin(options?: { [key: string]: any }) {
 
 /** 搜索用户 GET /user/search */
 export async function searchUsers(options?: { [key: string]: any }) {
-  return request<API.BaseResponse<API.CurrentUser[]>>('/user/search', {
+  return request<API.BaseResponse<API.CurrentUser[]>>('http://localhost:8080//user/search', {
     method: 'GET',
     ...(options || {}),
   });
@@ -53,7 +53,7 @@ export async function searchUsers(options?: { [key: string]: any }) {
 
 /** 此处后端没有提供注释 GET /notices */
 export async function getNotices(options?: { [key: string]: any }) {
-  return request<API.NoticeIconList>('/notices', {
+  return request<API.NoticeIconList>('http://localhost:8080//notices', {
     method: 'GET',
     ...(options || {}),
   });
@@ -70,7 +70,7 @@ export async function rule(
   },
   options?: { [key: string]: any },
 ) {
-  return request<API.RuleList>('/rule', {
+  return request<API.RuleList>('http://localhost:8080//rule', {
     method: 'GET',
     params: {
       ...params,
@@ -81,7 +81,7 @@ export async function rule(
 
 /** 新建规则 PUT /rule */
 export async function updateRule(options?: { [key: string]: any }) {
-  return request<API.RuleListItem>('/rule', {
+  return request<API.RuleListItem>('http://localhost:8080//rule', {
     method: 'PUT',
     ...(options || {}),
   });
@@ -89,7 +89,7 @@ export async function updateRule(options?: { [key: string]: any }) {
 
 /** 新建规则 POST /rule */
 export async function addRule(options?: { [key: string]: any }) {
-  return request<API.RuleListItem>('/rule', {
+  return request<API.RuleListItem>('http://localhost:8080//rule', {
     method: 'POST',
     ...(options || {}),
   });
@@ -97,7 +97,7 @@ export async function addRule(options?: { [key: string]: any }) {
 
 /** 删除规则 DELETE /rule */
 export async function removeRule(options?: { [key: string]: any }) {
-  return request<Record<string, any>>('/rule', {
+  return request<Record<string, any>>('http://localhost:8080//rule', {
     method: 'DELETE',
     ...(options || {}),
   });
