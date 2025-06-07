@@ -52,8 +52,8 @@ const Register: React.FC = () => {
             }
           }}
           logo={<img alt="logo" src={SYSTEM_LOGO}/>}
-          title="编程导航知识星球"
-          subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">最好的编程学习知识圈子</a>}
+          title="神舟星球认证区"
+          subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">最好最全的美图圈子</a>}
           initialValues={{
             autoLogin: true,
           }}
@@ -76,7 +76,7 @@ const Register: React.FC = () => {
                 rules={[
                   {
                     required: true,
-                    message: '账号是必填项！',
+                    message: '账号必填！',
                   },
                 ]}
               />
@@ -90,7 +90,7 @@ const Register: React.FC = () => {
                 rules={[
                   {
                     required: true,
-                    message: '密码是必填项！',
+                    message: '密码必填！',
                   },
                   {
                     min: 8,
