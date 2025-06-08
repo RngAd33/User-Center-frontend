@@ -4,15 +4,15 @@
 declare namespace API {
   type CurrentUser = {
     id: number;
-    username: string;
-    userAccount: string;
+    userName: string;
+    planetCode: string;
+    role: number;
     avatarUrl?: string;
-    gender:number;
+    gender: number;
+    age: number;
     phone: string;
     email: string;
     userStatus: number;
-    userRole: number;
-    planetCode: string;
     createTime: Date;
   };
 
@@ -51,7 +51,6 @@ declare namespace API {
     code: number,
     data: T,
     message: string,
-    description: string,
   }
 
   type RuleList = {

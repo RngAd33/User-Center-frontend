@@ -41,7 +41,9 @@ const Login: React.FC = () => {
   const handleSubmit = async (values: API.LoginParams) => {
     try {
       // 登录
-      const user = await login({...values, type});
+      // @ts-ignore
+      const { userName, userPassword } = values;
+      const user = await login({ userName, userPassword });
 
       if (user) {
         const defaultLoginSuccessMessage = '登录成功！';
@@ -87,7 +89,7 @@ const Login: React.FC = () => {
           {type === 'account' && (
             <>
               <ProFormText
-                name="userAccount"
+                name="userName"
                 fieldProps={{
                   size: 'large',
                   prefix: <UserOutlined className={styles.prefixIcon}/>,
